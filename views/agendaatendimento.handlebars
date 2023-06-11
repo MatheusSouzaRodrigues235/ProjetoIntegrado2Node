@@ -1,0 +1,51 @@
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-12 .offset-md-6">
+      <form action="/add-agendamento" method="POST">
+        <div class="mb-3">
+          <label for="imputNome" class="form-label">Nome</label>
+          <input type="text" class="form-control" id="imputNome" name="imputNome" aria-describedby="nomeHelp">
+          <div id="nomeHelp" class="form-text">Digite seu nome para identificação.</div>
+        </div>
+        <div class="mb-3">
+          <label for="imputTelefone" class="form-label">Telefone</label>
+          <input type="number" class="form-control" id="imputTelefone" name="imputTelefone"
+            aria-describedby="telefoneHelp">
+          <div id="telefoneHelp" class="form-text">Digite seu telefone para identificação com ddd.</div>
+        </div>
+        <div class="mb-3" hidden="true">
+          <label for="imputAtendido" class="form-label">Atendido</label>
+          <input type="text" class="form-control" id="imputAtendido" name="imputAtendido" value="Não">
+
+        </div>
+        <div class="mb-3">
+
+
+
+          <div class="dropdown">
+            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Botão dropdown
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">09:00</a>
+              <a class="dropdown-item" href="#">10:00</a>
+              <a class="dropdown-item" href="#">11:00</a>
+              <a class="dropdown-item" href="#">12:00</a>
+              <a class="dropdown-item" href="#">14:00</a>
+              <a class="dropdown-item" href="#">15:00</a>
+              <a class="dropdown-item" href="#">16:00</a>
+              <a class="dropdown-item" href="#">17:00</a>
+              <a class="dropdown-item" href="#">18:00</a>
+              <a class="dropdown-item" href="#">19:00</a>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+
+    </div>
+
+    </form>
+  </div>
+</div>
