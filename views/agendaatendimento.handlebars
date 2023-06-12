@@ -1,14 +1,19 @@
-<div class="container text-center">
+<br>
+<br>
+<br>
+
+<br>
+<div class="container text-center" style="width: 20%">
   <div class="row">
     <div class="col-md-12 .offset-md-6">
       <form action="/add-agendamento" method="POST">
         <div class="mb-3">
-          <label for="imputNome" class="form-label">Nome</label>
+          <label for="imputNome" class="form-label" style="font-size: xx-large;">Nome</label>
           <input type="text" class="form-control" id="imputNome" name="imputNome" aria-describedby="nomeHelp">
           <div id="nomeHelp" class="form-text">Digite seu nome para identificação.</div>
         </div>
         <div class="mb-3">
-          <label for="imputTelefone" class="form-label">Telefone</label>
+          <label for="imputTelefone" class="form-label" style="font-size: xx-large;">Telefone</label>
           <input type="number" class="form-control" id="imputTelefone" name="imputTelefone"
             aria-describedby="telefoneHelp">
           <div id="telefoneHelp" class="form-text">Digite seu telefone para identificação com ddd.</div>
@@ -19,27 +24,58 @@
 
         </div>
         <div class="mb-3">
+          <ul class="list-group">
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="9" id="firstRadio">
+              <label class="form-check-label" for="firstRadio">09:00</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="10" id="secondRadio">
+              <label class="form-check-label" for="secondRadio">10:00</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="11" id="thirdRadio">
+              <label class="form-check-label" for="thirdRadio">11:00</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="12" id="thirdRadio">
+              <label class="form-check-label" for="thirdRadio">12:00</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="13" id="thirdRadio">
+              <label class="form-check-label" for="thirdRadio">13:00</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="14" id="thirdRadio" disabled>
+              <label class="form-check-label" for="thirdRadio">14:00</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="15" id="thirdRadio">
+              <label class="form-check-label" for="thirdRadio">15:00</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="16" id="thirdRadio" disabled>
+              <label class="form-check-label" for="thirdRadio">16:00</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="17" id="thirdRadio">
+              <label class="form-check-label" for="thirdRadio">17:00</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="18" id="thirdRadio">
+              <label class="form-check-label" for="thirdRadio">18:00</label>
+            </li>
+            <li class="list-group-item">
+              <input class="form-check-input me-1" type="radio" name="listGroupRadio" value="19" id="thirdRadio">
+              <label class="form-check-label" for="thirdRadio">19:00</label>
+            </li>
 
 
 
-          <div class="dropdown">
-            <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
-              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Botão dropdown
-            </button>
-            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-              <a class="dropdown-item" href="#">09:00</a>
-              <a class="dropdown-item" href="#">10:00</a>
-              <a class="dropdown-item" href="#">11:00</a>
-              <a class="dropdown-item" href="#">12:00</a>
-              <a class="dropdown-item" href="#">14:00</a>
-              <a class="dropdown-item" href="#">15:00</a>
-              <a class="dropdown-item" href="#">16:00</a>
-              <a class="dropdown-item" href="#">17:00</a>
-              <a class="dropdown-item" href="#">18:00</a>
-              <a class="dropdown-item" href="#">19:00</a>
-            </div>
-          </div>
+
+
+
+          </ul>
         </div>
         <button type="submit" class="btn btn-primary">Submit</button>
 

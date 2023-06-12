@@ -1,13 +1,12 @@
 const express = require('express')
 const app = express()
 const db = require('./models/db')
-//const handlebars = require('express-handlebars')
 const { engine } = require('express-handlebars')
 const bodyParser = require("body-parser")
 const moment = require('moment')
 const agendamento = require("./models/agendaatendimento")
 const Consulta = require("./models/agendaatendimento")
-const porta = process.env.PORT || 3000;
+const porta = 3000
 
 //Configurações
 
@@ -34,7 +33,7 @@ app.post('/add-agendamento', function (req, res) {
     agendamento.create({
         nome: req.body.imputNome,
         telefone: req.body.imputTelefone,
-        horario: req.body.imputHorario,
+        horario: req.body.listGroupRadio,
         atendido: req.body.imputAtendido
     }).then(function () {
         res.redirect('/agendaatendimento')
@@ -44,20 +43,12 @@ app.post('/add-agendamento', function (req, res) {
     })
     //res.send("Nome: " + req.body.nome + "<br>Valor: " + req.body.valor + "<br>") 
 })
-
-
-
-app.get('/consultahorarios', (req, res) =>{
-    Consulta.findAll({order: [['id', 'DESC']]}).then(function(todosatendimentos){
-        res.render('consultahorarios', {todosatendimentos: todosatendimentos})
+app.get('/exibeatendimentos', (req, res) => {
+    Consulta.findAll({where: {atendido: 'Não'}, limit: 2, order: [['id', 'DESC']]}).then(function(todosatendimentos){
+        res.render('exibeatendimentos', {todosatendimentos: todosatendimentos})
         console.log(todosatendimentos);
     })
-    
 })
-
-
-
-
 
 // No terminal, digitar node index
 app.listen(porta, () => {
