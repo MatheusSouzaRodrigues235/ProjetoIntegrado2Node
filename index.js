@@ -6,7 +6,7 @@ const bodyParser = require("body-parser")
 const moment = require('moment')
 const agendamento = require("./models/agendaatendimento")
 const Consulta = require("./models/agendaatendimento")
-const porta = 3000
+const porta = process.env.PORT||3000;
 
 //Configurações
 
